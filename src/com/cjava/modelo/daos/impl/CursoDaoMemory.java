@@ -3,12 +3,22 @@ package com.cjava.modelo.daos.impl;
 import com.cjava.modelo.daos.CursoDao;
 import com.cjava.modelo.entidades.Curso;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CursoDaoMemory implements CursoDao {
+
+    private List<Curso> lista;
+
+    //se inicializa la variable lista
+    public CursoDaoMemory() {
+        lista = new ArrayList<>();
+    }
+
     @Override
     public void create(Curso curso) {
         System.out.println("grabando en memoria");
+        lista.add(curso);
     }
 
     @Override
