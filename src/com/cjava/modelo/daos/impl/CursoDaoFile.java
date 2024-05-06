@@ -8,26 +8,28 @@ import java.util.List;
 public class CursoDaoFile implements CursoDao {
     @Override
     public void create(Curso curso) {
-
+        System.out.println("grabando en file");
     }
 
     @Override
     public void update(Curso curso) {
-
+        System.out.println("actualizando en file");
     }
 
     @Override
     public void delete(int id) {
-
+        System.out.println("borrando en file");
     }
 
     @Override
     public Curso find(int id) {
+        System.out.println("buscando en file");
         return null;
     }
 
     @Override
     public List<Curso> findAll() {
-        return List.of();
+        System.out.println("listar en file");
+        return null;
     }
 }
