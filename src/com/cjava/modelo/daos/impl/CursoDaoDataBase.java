@@ -8,26 +8,28 @@ import java.util.List;
 public class CursoDaoDataBase implements CursoDao {
     @Override
     public void create(Curso curso) {
-
+        System.out.println("grabando en db");
     }
 
     @Override
     public void update(Curso curso) {
-
+        System.out.println("actualizando en db");
     }
 
     @Override
     public void delete(int id) {
-
+        System.out.println("borrando en db");
     }
 
     @Override
     public Curso find(int id) {
+        System.out.println("buscando en db");
         return null;
     }
 
     @Override
     public List<Curso> findAll() {
-        return List.of();
+        System.out.println("listar en db");
+        return null;
     }
 }
