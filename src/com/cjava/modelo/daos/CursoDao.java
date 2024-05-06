@@ -4,11 +4,10 @@ import com.cjava.modelo.entidades.Curso;
 
 import java.util.List;
 
-public interface CursoDao {
-    public void create(Curso curso);
-    public void update(Curso curso);
-    public void delete(int id);
-    public Curso find(int id);
-    public List<Curso> findAll();
+public interface CursoDao extends EntityDao<Curso>{
+    //se eliminan los metodos anteriores y se hace un extends con EntityDao
+    //heredaran los metodos de EntityDao
 
+    //creamos un metodo distinto a los de EntityDao
+    public List<Curso> findByName(String name);
 }

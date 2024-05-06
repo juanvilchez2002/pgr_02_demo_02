@@ -1,5 +1,7 @@
 package com.cjava.modelo.entidades;
 
+import static com.cjava.util.Util.generarId;
+
 public class Alumno {
     private int id;
     private String nombre;
@@ -8,22 +10,18 @@ public class Alumno {
     private double promedio;
 
     public Alumno() {
+        this.id = generarId();
     }
 
-    public Alumno(double promedio, String estado, String apellido, String nombre, int id) {
-        this.promedio = promedio;
-        this.estado = estado;
-        this.apellido = apellido;
+    public Alumno(String nombre, String apellido, double promedio ) {
         this.nombre = nombre;
-        this.id = id;
+        this.apellido = apellido;
+        this.promedio = promedio;
+        this.id = generarId();
     }
 
     public int getId() {
         return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getNombre() {
@@ -43,11 +41,9 @@ public class Alumno {
     }
 
     public String getEstado() {
+        if(promedio>=13) estado = "Aprobado";
+        else estado = "Desaprobado";
         return estado;
-    }
-
-    public void setEstado(String estado) {
-        this.estado = estado;
     }
 
     public double getPromedio() {
@@ -64,7 +60,7 @@ public class Alumno {
                 "id=" + id +
                 ", nombre='" + nombre + '\'' +
                 ", apellido='" + apellido + '\'' +
-                ", estado='" + estado + '\'' +
+                ", estado='" + getEstado() + '\'' +
                 ", promedio=" + promedio +
                 '}';
     }

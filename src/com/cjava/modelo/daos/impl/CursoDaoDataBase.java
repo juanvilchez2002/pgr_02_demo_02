@@ -6,6 +6,7 @@ import com.cjava.modelo.entidades.Curso;
 import java.util.List;
 
 public class CursoDaoDataBase implements CursoDao {
+    //metodos que se heredan de EntityDao
     @Override
     public void create(Curso curso) {
         System.out.println("grabando en db");
@@ -30,6 +31,12 @@ public class CursoDaoDataBase implements CursoDao {
     @Override
     public List<Curso> findAll() {
         System.out.println("listar en db");
+        return null;
+    }
+
+    //este metodo es de CursoDao
+    @Override
+    public List<Curso> findByName(String name) {
         return null;
     }
 }

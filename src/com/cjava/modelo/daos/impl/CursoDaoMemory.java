@@ -32,4 +32,10 @@ public class CursoDaoMemory implements CursoDao {
         System.out.println("listar en memoria");
         return null;
     }
+
+    //este metodo es de CursoDao
+    @Override
+    public List<Curso> findByName(String name) {
+        return null;
+    }
 }
