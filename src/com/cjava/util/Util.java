@@ -1,7 +1,7 @@
 package com.cjava.util;
 
 public class Util {
-    public static Tipo opc = Tipo.DATABASE;
+    public static Tipo opc = Tipo.MEMORY;
 
     //variable para el id
     public static int id = 1;
